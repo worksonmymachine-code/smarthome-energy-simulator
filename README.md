@@ -11,7 +11,7 @@ Everything runs locally in the browser with fictional data. There is **no backen
 Requires [Node.js LTS](https://nodejs.org/) (20.9 or newer) and Git.
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/USERNAME/smarthome-energy-simulator.git
 cd smarthome-energy-simulator
 npm ci
 npm run dev
@@ -46,6 +46,12 @@ Each device runs its own independent copy of the simulation in its own browser. 
 |---|---|
 | `npm test` | Unit and UI integration tests (Vitest + Testing Library) |
 | `npm run typecheck` | TypeScript check (`tsc --noEmit`) |
+
+## Documentation challenge pack
+
+The six requested documentation cards are completed in [`docs/`](docs/README.md): README & Quickstart, Judge Runbook, Five-Test Checklist, User Quickstart, Data & Privacy Note, and Handoff & Limitations.
+
+Capture screenshots after verifying the application locally and save them in `docs/screenshots/`; no unverified screenshots are included.
 
 ## Features
 
@@ -125,17 +131,15 @@ Stack: Next.js (App Router), React, TypeScript, plain CSS, Vitest. No Tailwind, 
 
 ## Push to GitHub
 
-Create an empty repository on GitHub first (no README/licence), then:
+Create an empty repository on GitHub first (no README/licence). Replace `USERNAME` below with your GitHub username. If you already have this project locally, do not run `git init` again; add the remote and push your existing repository.
 
 ```bash
-cd smarthome-energy-simulator
-git init
-git add .
-git commit -m "SmartHome Energy Simulator: MVP, SimpleHome Mode and simulated power outage"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/smarthome-energy-simulator.git
+git remote add origin https://github.com/USERNAME/smarthome-energy-simulator.git
 git push -u origin main
 ```
+
+If `origin` is already configured, inspect it with `git remote -v` instead of adding it again. Do not initialize a second Git repository inside an existing one.
 
 If this folder already contains a `.git` directory, skip `git init`. `.gitignore` already excludes `node_modules`, `.next`, build output and any `.env` files.
 
